@@ -98,11 +98,11 @@ jobs:
         with:
           python-version: '3.11'
           
-      - name: Set up Python 2.7
-        uses: actions/setup-python@v5
-        with:
-          python-version: '2.7'
-        continue-on-error: true  # Python 2.7 可能不可用
+      # - name: Set up Python 2.7
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: '2.7'
+      #   continue-on-error: true  # Python 2.7 可能不可用
 
   
       - name: Add Gitee ssh-key to known hosts
@@ -117,8 +117,8 @@ jobs:
       - name: Set up Node.js v16.0.0
         uses: actions/setup-node@v4
         with:
-          # node-version: '14.10.0'
-          node-version: '16.14.0'
+          node-version: '14.x'
+          # node-version: '16.14.0'
 
       - name: git clone 
         run: |
