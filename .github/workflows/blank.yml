@@ -97,7 +97,14 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.11'
+          
+      - name: Set up Python 2.7
+        uses: actions/setup-python@v5
+        with:
+          python-version: '2.7'
+        continue-on-error: true  # Python 2.7 可能不可用
 
+  
       - name: Add Gitee ssh-key to known hosts
         shell: bash
         run: |
