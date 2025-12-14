@@ -119,6 +119,7 @@ jobs:
         with:
           node-version: '14.x'
           architecture: 'x64'  # 关键：强制使用 x64
+          
 
           
           # node-version: '16.14.0'
@@ -169,6 +170,8 @@ jobs:
           cd ${UTILS_DIR}
           source utils.sh
           popd 
+
+          mv /opt/homebrew/Cellar/node@22/22.21.1_4 /opt/homebrew/Cellar/node@22/22.21.1_4_bak
 
 
           npm config set registry https://registry.npmmirror.com
