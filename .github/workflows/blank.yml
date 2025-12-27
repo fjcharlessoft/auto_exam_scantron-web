@@ -6,7 +6,7 @@ name: CI
 on:
   repository_dispatch:
     types:
-      - auto_exam_scantron-web
+      - auto_exam_scantron-web_public_ci
   push:
     branches: [ '*' ]
   pull_request:
